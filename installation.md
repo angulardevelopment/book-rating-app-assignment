@@ -1,8 +1,8 @@
-##Please fork the project before starting
+# Please fork the project before starting
 
 Click on the fork option to fork the project into your list of repositories.
 
-#Installation
+# Installation
 
 1. ```bash
    git clone https://github.com/yourusername/book-rating-app-assignment.git
