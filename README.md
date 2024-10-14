@@ -1,3 +1,5 @@
+**Here's what the app needs to be worked on provided by the maintainer.As we move along and make the app better we can keep updating the readme.md file**
+
 # book-rating-app
 
 Users can add and remove books on their account
@@ -22,4 +24,3 @@ Admins can filter books by created date
 Clean and good looking UI/UX is expected
 
 The API must be Restful. All actions should be executed via API.
-
