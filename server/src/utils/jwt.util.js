@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken'; 
-import * as jwt_decode from 'jwt-decode'; 
+import {jwtDecode} from 'jwt-decode';
 import dotenv from 'dotenv'; 
 
 dotenv.config();
@@ -30,7 +30,8 @@ export const verifyToken = (token) => {
 }
   
 export const decodeToken = (token) => {
-	const id = jwt_decode(token)._id
+
+	const id = jwtDecode(token)._id
 	return id
 }
 
