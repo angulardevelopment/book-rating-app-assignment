@@ -20,3 +20,10 @@ export const LoginSchema = joi.object().keys({
   password: joi.string().min(6).required()
 });
 
+export const UpdateSchema = joi.object().keys({
+  firstName: joi.string(),
+  lastName: joi.string(),
+  userName: joi.string(),
+  email: joi.string().email(),
+});
+

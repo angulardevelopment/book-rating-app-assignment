@@ -21,7 +21,6 @@ export const isAuth = async (req, res, next) => {
 
         // Decode the token to get user details
         req.user = decodeToken(token); // Ensure decodeToken returns the expected user object
-
         // Call the next middleware
         next();
 

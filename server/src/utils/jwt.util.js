@@ -1,6 +1,5 @@
 import jwt from 'jsonwebtoken';
-// import * as jwt_decode from 'jwt-decode';// This was not working due to the way the module was imported
-import { jwtDecode } from 'jwt-decode'; // This is the correct way to import the module
+import { jwtDecode } from 'jwt-decode'; 
 import dotenv from 'dotenv';
 
 dotenv.config();
