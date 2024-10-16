@@ -57,19 +57,15 @@ export const login = async (req, res) => {
       email: email.toLowerCase(),
       deleted: false,
     });
-    console.log("existingUser", existingUser);
     if (!existingUser)
       return res.status(404).json({ message: "User does not exist" });
 
     const checkPassword = await existingUser.matchPassword(password);
-    console.log('checkPassword', checkPassword)
     if (!checkPassword)
       return res.status(400).json({ message: "Check your Password" });
 
     const accessToken = encode_jwt({ _id: existingUser._id });
-    console.log('accessToken', accessToken)
     const refreshToken = generateRefreshToken({ _id: existingUser._id });
-    console.log('refreshToken', refreshToken)
 
     existingUser.refreshToken = refreshToken;
     await existingUser.save();
@@ -190,7 +186,6 @@ export const deleteUser = async (req, res) => {
 
 export const refreshAccessToken = async (req, res) => {
   const refreshToken = req.cookies.refreshToken;
-  console.log("refreshToken", refreshToken);
   if (!refreshToken)
     return res.status(403).json({
       message: "Refresh token not found",
@@ -198,14 +193,12 @@ export const refreshAccessToken = async (req, res) => {
 
   // verify refresh token
   const { decoded, expired } = verifyRefreshToken(refreshToken);
-  console.log("decoded", decoded);
 
   if (expired) {
     return res.status(403).json({ message: "Refresh token expired" });
   }
 
   const user = await userModel.findById(decoded._id);
-  console.log("user", user);
   if (!user) {
     return res.status(404).json({ message: "User not found" });
   }
