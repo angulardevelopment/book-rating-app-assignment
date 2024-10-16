@@ -9,9 +9,16 @@ export const encode_jwt = function (obj) {
 	// 1 hour
 	const jwtToken = jwt.sign(obj,
 					process.env.JWT_SECRET,
-					{ expiresIn: '1h' }
+					{ expiresIn: '15m' }
 				);
 	return jwtToken;
+}
+
+export const generateRefreshToken = (obj) => {
+	const refreshToken = jwt.sign(obj, process.env.JWT_REFRESH_SECRET, {
+		expiresIn: '3d'
+	})
+	return refreshToken;
 }
 
 export const verifyToken = (token) => {
@@ -35,4 +42,18 @@ export const decodeToken = (token) => {
 	return id
 }
 
-// export default { encode_jwt, verifyToken, decodeToken } 
+// Verify Refresh Token
+export const verifyRefreshToken = (token) => {
+    try {
+        const decoded = jwt.verify(token, process.env.JWT_REFRESH_SECRET);
+        return {
+            expired: false,
+            decoded,
+        };
+    } catch (e) {
+        return {
+            expired: e.message === 'jwt expired',
+            decoded: null,
+        };
+    }
+};
