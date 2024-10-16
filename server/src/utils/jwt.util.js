@@ -1,6 +1,6 @@
-import jwt from 'jsonwebtoken'; 
-import {jwtDecode} from 'jwt-decode';
-import dotenv from 'dotenv'; 
+import jwt from 'jsonwebtoken';
+import { jwtDecode } from 'jwt-decode'; 
+import dotenv from 'dotenv';
 
 dotenv.config();
 
@@ -8,9 +8,9 @@ dotenv.config();
 export const encode_jwt = function (obj) {
 	// 1 hour
 	const jwtToken = jwt.sign(obj,
-					process.env.JWT_SECRET,
-					{ expiresIn: '1h' }
-				);
+		process.env.JWT_SECRET,
+		{ expiresIn: '1h' }
+	);
 	return jwtToken;
 }
 
@@ -18,19 +18,18 @@ export const verifyToken = (token) => {
 	try {
 		const decoded = jwt.verify(token, process.env.JWT_SECRET);
 		return {
-		  expired: false,
-		  decoded,
-	};
-	} catch (e) { 
-			return {
-				expired: e.message === 'jwt expired',
-				decoded: null,
-	  	};
+			expired: false,
+			decoded,
+		};
+	} catch (e) {
+		return {
+			expired: e.message === 'jwt expired',
+			decoded: null,
+		};
 	}
 }
-  
-export const decodeToken = (token) => {
 
+export const decodeToken = (token) => {
 	const id = jwtDecode(token)._id
 	return id
 }
