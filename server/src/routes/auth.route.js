@@ -6,7 +6,11 @@ import { RegisterSchema, LoginSchema, UpdateSchema } from "../schemas/user.schem
 
 import { 
     deleteUser, 
+    getAllAdmin, 
+    getUser, 
     login, 
+    logout, 
+    refreshAccessToken, 
     register, 
     updateUser 
 } from "../controllers/auth.controller.js"; 
@@ -20,6 +24,12 @@ router.post("/register", validate(RegisterSchema), register);
 // Authenticated route
 router.patch("/", validate(UpdateSchema), isAuth, updateUser)
 router.delete("/:id", isAuth, deleteUser);
+router.post('/logout', isAuth, logout)
+
+// User routes
+router.get("/all", getAllAdmin);
+router.post('/refresh-token', refreshAccessToken)
+router.get("/:id", isAuth, getUser);
 
 
 export default router;
