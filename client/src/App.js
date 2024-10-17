@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./components/HomePage/HomePage";
+import NavBar from "./components/NavBar/NavBar";
 
 const Footer = () => {
   return (
@@ -8,9 +9,27 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-section">
           <h4>Follow Us</h4>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Facebook
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Twitter
+          </a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
         </div>
 
         <div className="footer-section">
@@ -29,7 +48,8 @@ const Footer = () => {
 
 const App = () => {
   return (
-    <div className="app-container">
+    <div>
+      <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
       </Routes>
@@ -39,4 +59,3 @@ const App = () => {
 };
 
 export default App;
-

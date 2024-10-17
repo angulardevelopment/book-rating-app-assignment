@@ -1,0 +1,15 @@
+.button {
+  border-style: none;
+  margin-left: 5px;
+  border-radius: 4px;
+  background-color: white !important;
+}
+
+.button:hover {
+  color: White !important;
+  background-color: black !important;
+}
+
+.navContainer {
+  box-shadow: 0 2px 2px rgb(0, 0, 0, 0.2);
+}
