@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Rating App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Book Rating App</h1>
+        </header>
+
+        <!-- Section for adding notes and reviews -->
+        <section id="reading-notes">
+            <h2>Reading Notes</h2>
+            <textarea id="note-input" placeholder="Write your notes or reviews here..."></textarea>
+            <button id="save-note-btn">Save Note</button>
+            <div id="saved-notes">
+                <h3>Saved Notes</h3>
+                <ul id="notes-list"></ul>
+            </div>
+        </section>
+
+        <!-- Section for setting reading goals -->
+        <section id="reading-goals">
+            <h2>Reading Goals</h2>
+            <input type="number" id="goal-input" placeholder="Set your goal in pages">
+            <button id="set-goal-btn">Set Goal</button>
+            <p id="goal-message"></p>
+        </section>
+
+        <!-- Section for reading timer -->
+        <section id="reading-timer">
+            <h2>Reading Timer</h2>
+            <p id="timer-display">00:00:00</p>
+            <button id="start-timer-btn">Start Timer</button>
+            <button id="stop-timer-btn">Stop Timer</button>
+            <button id="reset-timer-btn">Reset Timer</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
