@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./components/HomePage/HomePage";
+import BookRatingPage from "./components/BookRatingPage/BookRatingPage";
 
 const Footer = () => {
   return (
@@ -31,7 +32,8 @@ const App = () => {
   return (
     <div className="app-container">
       <Routes>
-        <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<HomePage />}></Route>
+          <Route path="/book-rating" element={<BookRatingPage />}></Route>
       </Routes>
       <Footer /> {/* Enhanced Footer is added here */}
     </div>
