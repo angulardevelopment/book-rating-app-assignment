@@ -1,30 +1,19 @@
-import express from "express"
-import dotenv from "dotenv"
-import mongoose from "mongoose"
+// import { connect } from "./src/routes/auth.";
+import createServer from "./src/utils/server.utils.js"; // Include file extensions for ES modules
+import {connect} from "./src/utils/db.utils.js";
+import dotenv from "dotenv";
 
-const app=express()
+dotenv.config();
+// const createServer = require("./src/utils/server.utils");
+// const connect = require("./src/utils/db.utils");
+// require("dotenv").config();
 
-dotenv.config()
+const app = createServer();
 
-const connect = async () => {
-    try {
-      await mongoose.connect(process.env.MONGO_TOKEN);
-      console.log("Connected to Database");
-    } catch (e) {
-      throw e;
-    }
-  };
-  
-  mongoose.connection.on("connected", () => {
-    console.log("mongodb connected");
-  });
-  
-  mongoose.connection.on("disconnected", () => {
-    console.log("mongodb disconnected");
-  });
+const port = process.env.PORT || 5050;
 
-app.listen(5000, () => {
-    connect();
-    console.log("server listening on port number 5000");
-  });
-  
+app.listen(port, async () => {
+  connect();
+  console.log(`server is up on port ${port}`);
+  await connect();
+});
