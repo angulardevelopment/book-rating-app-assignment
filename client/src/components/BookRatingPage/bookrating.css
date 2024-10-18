@@ -1,0 +1,161 @@
+.book-rating-container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.book-rating-title-container{
+    height: 100%;
+    width: 30%;
+    background-color: rgb(7, 0, 48);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-rating-title-content{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding-inline: 3rem;
+    letter-spacing: 0.5px;
+}
+
+.book-rating-title{
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: white;
+}
+
+.book-rating-title-description{
+    font-size: 1rem;
+    opacity: 0.8;
+    color: rgb(201, 201, 201);
+}
+
+.book-rating-form-container{
+    height: 100%;
+    width: 70%;
+    background-color: rgb(246, 246, 246);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.book-rating-form-content{
+    width: 80%;
+    /* background-color: aqua; */
+    padding: 1rem;
+    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 60%;
+}
+
+.question-container{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.question{
+    font-size: 1.2rem;
+    letter-spacing: 0.3px;
+}
+
+.answer{
+    font-size: 0.8rem;
+    letter-spacing: 0.3px;
+    border: solid 1px;
+    border-radius: 4px;
+    padding: 0.6rem;
+    outline: none;
+    transition: all 0.3s ease;
+    border: solid 1px #ccc;
+}
+
+.description-container{
+    min-height: 100px;
+}
+
+.rating-container{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+}
+
+.rating-box{
+    cursor: pointer;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    gap: 0.5rem;
+    border-radius: 7px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: all 0.3s;
+}
+
+.selected-rating-box{
+    background-color: rgb(125, 125, 236);
+    color: white;
+}
+
+.rating-box:hover{
+    background-color: rgb(125, 125, 236);
+    color: white;
+}
+
+.rating-icon{
+    font-size: 1.5rem;
+}
+
+.rating-text{
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.answer:focus{
+    border-color: rgb(125, 125, 236);
+}
+
+.answer:hover{
+    border-color: rgb(125, 125, 236);
+}
+
+.book-rating-action-container{
+    width: 80%;
+    display: flex;
+    justify-content: end;
+}
+
+.save-button{
+    width: 70px;
+    height: 40px;
+    border: none;
+    border-radius: 7px;
+    background-color: rgb(71, 71, 248);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.save-button:hover{
+    background-color: rgb(125, 125, 236);
+    color: white;
+}
+
+body{
+    margin: unset;
+}
