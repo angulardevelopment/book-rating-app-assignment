@@ -63,11 +63,9 @@ function BookRatingForm() {
 
   useEffect(()=>{
     // Preset book details when entering the page if it has book rating id
-    const action = params.get("action");
     const bookRatingId = params.get("bookRatingId");
-
-    if(action === "update" && bookRatingId){
-       // Check if params has action "update" and bookRatingId is not undefined then set the data
+    if(bookRatingId){
+       // Check if params has bookRatingId then set the data
        setRating((prevState)=>{
         const updatedBookRatings = dummy.find((data) => data.bookRatingId === bookRatingId);
         if(updatedBookRatings){
@@ -110,25 +108,29 @@ function BookRatingForm() {
     const review = rating.review;
     const reviewDate = rating.reviewDate;
 
-    const isUpdateAction = params.get("action") === "update";
     const bookRatingIdParams = params.get("bookRatingId");
 
-    // Only run update if both action and id present
-    if (isUpdateAction && bookRatingIdParams) {
-        // Update case
+    if (bookRatingIdParams) {
+        // Update case when Id is valid, bookRatingId will not be empty, create API will be called here if Id is invalid
         if (bookRatingId) {
-          // Your update API call here
-          alert(`Update successfully!`);
+            alert(`Update successfully!`);
+
+            // Your update API call here
+
         } else {
           bookRatingId = generatebookRatingId();
           alert(`Rated book successfully, here is your book rating ID: ${bookRatingId}`);
-          // Your save API call here if needed
+
+          // Your create API call here if needed
+
         }
       } else {
-        // Save case when action is not update
+        // Save case when id is not present
         bookRatingId = generatebookRatingId();
         alert(`Rated book successfully, here is your book rating ID: ${bookRatingId}`);
-        // Your save API call here
+        
+        // Your create API call here
+
       }
   }
 
