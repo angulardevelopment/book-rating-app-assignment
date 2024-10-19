@@ -1,7 +1,10 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./components/HomePage/HomePage";
+import Login from "./components/LoginPage/Login";
+import Register from "./components/RegisterPage/Register";
 
+// New Footer component
 const Footer = () => {
   return (
     <footer className="footer">
@@ -32,6 +35,8 @@ const App = () => {
     <div className="app-container">
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
       <Footer /> {/* Enhanced Footer is added here */}
     </div>
@@ -39,4 +44,3 @@ const App = () => {
 };
 
 export default App;
-
