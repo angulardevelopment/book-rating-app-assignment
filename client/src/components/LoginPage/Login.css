@@ -1,0 +1,190 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.login-body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.formheader {
+margin-bottom:9vh;
+display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:2vh;
+}
+.formheader>h3{
+    font-family: Poppins;
+font-size: 4vw;
+font-weight: 500;
+/* line-height: 60px; */
+letter-spacing: -0.04em;
+text-align: center;
+color: #0B0B0B;
+}
+.formheader>p{
+    font-family: Roboto;
+font-size: 20px;
+font-weight: 400;
+line-height: 25px;
+letter-spacing: 0em;
+/* text-align: center; */
+color:#979DA0;
+
+}
+form label{
+    color: #131200;
+    font-family: Roboto;
+font-size: 1.4vw;
+font-weight: 450;
+line-height: 25px;
+letter-spacing: 0em;
+text-align: left;
+padding-bottom:4px;
+}
+.email{
+    margin-bottom: 20px;
+}
+.email,.pwrd{
+    display: flex;
+    flex-direction: column;
+    
+    width:25vw;
+}
+.input{
+    background-color: #EFF0F1;
+    outline:none;
+    border:none;
+    width: 29vw;
+    height: 7vh;
+    padding:0.2vh 1vw;
+    border-radius: 15px; 
+}
+.email .input,.pwrd .input{
+    background-color: #EFF0F1;
+    outline:none;
+    border:none;
+    width: 29vw;
+    height: 7vh;
+    padding:0.2vh 1vw;
+    border-radius: 15px;
+}
+.login-btn {
+    background-color: hsla(130, 76%, 26%, 1);
+    color: white;
+    padding: 2vh 9vw;
+    border-radius: 6px;
+    border: none;
+    font-family: Roboto;
+    font-size: 1.2vw;
+    font-weight: 700;
+    text-align: center;
+
+}
+
+
+.login-btn:hover {
+    opacity: 50%;
+   cursor :pointer;
+}
+.flex {
+    display: flex;
+    position: relative;
+}
+
+.flex img {
+    position: absolute;
+    right: -3vw;
+    width: 1.3vw;
+    top: 6.7vh;
+}
+
+.mailDiv,
+.passwordDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+.rem {
+    display: flex;
+    justify-content: space-between;
+    font-family: Poppins;
+    gap:10vw;
+    font-size: 0.9vw;
+    margin:20px 0;
+   
+}
+
+.forgot {
+    color: #006400;
+    font-family: Roboto;
+font-size: 1.1vw;
+font-weight: 400;
+line-height: 25px;
+letter-spacing: 0em;
+text-align: left;
+}
+.rm-me{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    
+}
+form input[type="checkbox"] {
+    
+    border: 2px solid #555;
+  
+    border-radius: 3px;
+}
+.toggleIconDiv .shift{
+ position:absolute;
+ right:0;
+ margin-right:2px ;
+}
+.login-btn{
+    margin:40px auto;
+    display:flex;
+    /* margin:40px 0; */
+}
+.loggedIn{
+font-family: Roboto;
+font-size: 1vw;
+font-weight: 400;
+line-height: 25px;
+letter-spacing: 0em;
+text-align: left;
+}
+.createAcct-div{
+    margin:0 auto;
+    text-align: center;
+}
+.createAcct{
+    color: #006400;
+    font-family: Roboto;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .login-body .input{
+        height:6vh;
+        width:55vw;
+    }
+    form label{
+    font-size: 2vw;
+    font-weight: 450;
+    }
+    .rem .loggedIn {
+        font-size: 1.5vw;
+    }
+    .rem .forgot {
+        font-size: 1.5vw;
+    }
+    .login-btn{
+        font-size: 2.5vw; 
+    }
+}
