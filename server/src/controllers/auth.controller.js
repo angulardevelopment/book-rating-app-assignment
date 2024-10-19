@@ -8,8 +8,8 @@ import {
 export const register = async (req, res) => {
   try {
     const userInfo = req.body;
-    userInfo.email = userInfo.email.toLowerCase();
-    userInfo.userName = userInfo.userName.toLowerCase();
+    userInfo.email = userInfo.email?.toLowerCase();
+    userInfo.userName = userInfo.userName?.toLowerCase();
 
     const [existingEmail, existingUserName] = await Promise.all([
       userModel.findOne({ email: userInfo.email }),

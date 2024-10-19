@@ -1,0 +1,37 @@
+.createacct-form{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+.password{
+    display:flex;
+    flex-direction: column;
+    margin-right:60px;
+}
+
+.name-div,.contactinfo-div,.password-container{
+    display:flex;
+    gap:2vw;
+    margin:20px 0;
+}
+.mail,.lname,.fname{
+    display:flex;
+    flex-direction: column;
+ }
+.logo{
+    margin-top:20px;
+}
+
+@media screen and (max-width: 768px) {
+    .createacct-form .input{
+        height:6vh;
+        width:40vw;
+    }
+    .createacct-form label{
+        font-size: 3vw;
+        font-weight: 450;
+    }
+    .login-btn{
+        font-size: 3vw;
+    }
+}

@@ -1,8 +1,8 @@
 /* Add this to client/src/components/HomePage/home.css */
 .footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
+    background-color: #E0E0E0;
+    color: #555555;
+    padding: 2px 20px 3px;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -12,7 +12,7 @@
   .footer-content {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
   }
   
   .footer-section {
@@ -21,14 +21,14 @@
   }
   
   .footer-section h4 {
-    margin-bottom: 10px;
+    margin-bottom: 3px;
   }
   
   .footer-section a {
     display: block;
-    color: #fff;
+    color: #555555;
     text-decoration: none;
-    margin: 5px 0;
+    margin: 3px 0;
   }
   
   .footer-section a:hover {
@@ -42,12 +42,12 @@
   .footer-bottom {
     text-align: center;
     border-top: 1px solid #444;
-    padding-top: 10px;
+    padding-top: 5px;
   }
   
   .app-container {
-    min-height: 100vh;
-    padding-bottom: 80px;
+    /* min-height: 100vh; */
+    padding-bottom: 20px;
     position: relative;
   }
   
