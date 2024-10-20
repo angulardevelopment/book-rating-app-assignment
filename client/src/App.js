@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./components/HomePage/HomePage";
+import BookRatingPage from "./components/BookRatingPage/BookRatingPage";
 import Login from "./components/LoginPage/Login";
 import Register from "./components/RegisterPage/Register";
 
@@ -37,6 +38,7 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/book-rating" element={<BookRatingPage />}></Route>
       </Routes>
       <Footer /> {/* Enhanced Footer is added here */}
     </div>
