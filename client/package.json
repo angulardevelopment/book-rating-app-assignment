@@ -2,7 +2,7 @@
   "name": "books-app-rating",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000", 
+  "proxy": "http://localhost:5000",
   "dependencies": {
     "axios": "^1.7.7",
     "react": "^18.2.0",

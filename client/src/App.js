@@ -2,15 +2,13 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./components/HomePage/HomePage";
 
-
 import NavBar from "./components/NavBar/NavBar";
-
 
 import BookRatingPage from "./components/BookRatingPage/BookRatingPage";
 
 import Login from "./components/LoginPage/Login";
 import Register from "./components/RegisterPage/Register";
-
+import { BooksProvider } from "./contexts/BooksContext";
 
 // New Footer component
 const Footer = () => {
@@ -59,14 +57,16 @@ const Footer = () => {
 const App = () => {
   return (
     <div>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/book-rating" element={<BookRatingPage />}></Route>
-      </Routes>
-      <Footer /> {/* Enhanced Footer is added here */}
+      <BooksProvider>
+        <NavBar /> {/*Enhanced NavBar is added Here */}
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/book-rating" element={<BookRatingPage />}></Route>
+        </Routes>
+        <Footer /> {/* Enhanced Footer is added here */}
+      </BooksProvider>
     </div>
   );
 };
