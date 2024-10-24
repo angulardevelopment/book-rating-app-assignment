@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import styles from "./NavBar.module.css"; // Import CSS module
+import { useBooks } from "../../contexts/BooksContext";
 
 const NavBar = () => {
+  const { handleSearch, query } = useBooks();
   // State to toggle menu
 
   return (
     <div className={styles.navContainer}>
-      <nav className={`navbar navbar-expand-lg navbar-light sticky-top`}>
-        <a class="navbar-brand " href="#" styles={{ fontSize: "24px" }}>
+      <nav className="navbar navbar-expand-lg navbar-light sticky-top">
+        <a className="navbar-brand " href="#" styles={{ fontSize: "24px" }}>
           Book Rating App
         </a>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarTogglerDemo02"
@@ -19,41 +21,42 @@ const NavBar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav mr-auto ml-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
+        <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul className="navbar-nav mr-auto ml-auto mt-2 mt-lg-0">
+            <li className="nav-item active">
               <a className={`nav-link  ${styles.button}`} href="#">
                 Home
               </a>
             </li>
-            <li class="nav-item active">
+            <li className="nav-item active">
               <a className={`nav-link  ${styles.button}`} href="#">
                 Your Books
               </a>
             </li>
-            <li class="nav-item active">
+            <li className="nav-item active">
               <a className={`nav-link  ${styles.button}`} href="#">
                 Add Books
               </a>
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
+          <form className="form-inline my-2 my-lg-0">
             <input
-              class="form-control mr-sm-2"
+              className="form-control mr-sm-2"
               type="search"
-              placeholder="Search"
+              placeholder="Search here..."
+              value={query}
+              onChange={handleSearch}
             />
             <button
-              class="btn  my-2 my-sm-0"
-              type="submit"
+              className="btn  my-2 my-sm-0"
               style={{ border: "1px solid black" }}
             >
               Search
             </button>
-            <div class="nav-item active ">
+            <div className="nav-item active ">
               <button
                 className={`nav-link  ${styles.button}`}
                 href="#"
@@ -93,13 +96,13 @@ export default NavBar;
 //       <a href="#about">ADD BOOKS</a>
 //     </li>
 //     <li>
-//       <form class="form-inline my-2 my-lg-0">
+//       <form className="form-inline my-2 my-lg-0">
 //         <input
-//           class="form-control mr-sm-2"
+//           className="form-control mr-sm-2"
 //           type="search"
 //           placeholder="Search"
 //         />
-//         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+//         <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
 //           Search
 //         </button>
 //       </form>

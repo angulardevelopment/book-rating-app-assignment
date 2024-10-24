@@ -1,0 +1,61 @@
+.books-list {
+  margin-top: 0.1rem;
+  list-style: none;
+  display: grid;
+  height: 100vh;
+  overflow-y: scroll;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 2rem;
+}
+
+.books {
+  display: grid;
+  height: 10rem;
+  grid-template-columns: 1fr 5fr;
+  border-bottom: 1px solid black;
+  padding: 0.5rem 0.5rem;
+  color: black;
+}
+
+.books:hover {
+  background-color: #818589;
+  color: #f4ffff;
+  cursor: pointer;
+}
+
+.books-list::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+.books img {
+  height: 9rem;
+}
+
+.brief-details {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  overflow-y: hidden;
+}
+
+.title {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.author {
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.categories {
+  font-size: 0.8rem;
+}
+
+.extra-info {
+  display: flex;
+  margin: 1rem 0;
+  padding-left: 0.8rem;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
