@@ -6,6 +6,14 @@
   overflow-y: scroll;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 2rem;
+
+  background-image: linear-gradient(#cccccc9c, #cccccc),
+    url("../../../public/background.jpg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 100vh; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
 
 .books {
@@ -54,7 +62,7 @@
 
 .extra-info {
   display: flex;
-  margin: 1rem 0;
+  margin: 1rem 0 0 0;
   padding-left: 0.8rem;
   justify-content: space-between;
   font-size: 0.8rem;

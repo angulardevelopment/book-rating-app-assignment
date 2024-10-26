@@ -3,7 +3,7 @@ import styles from "./NavBar.module.css"; // Import CSS module
 import { useBooks } from "../../contexts/BooksContext";
 
 const NavBar = () => {
-  const { handleSearch, query } = useBooks();
+  const { handleSearch, query, handleSubmit } = useBooks();
   // State to toggle menu
 
   return (
@@ -42,7 +42,7 @@ const NavBar = () => {
               </a>
             </li>
           </ul>
-          <form className="form-inline my-2 my-lg-0">
+          <form className="form-inline my-2 my-lg-0" onSubmit={handleSubmit}>
             <input
               className="form-control mr-sm-2"
               type="search"

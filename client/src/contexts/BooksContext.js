@@ -65,7 +65,12 @@ function BooksProvider({ children }) {
   );
 
   function handleSearch(e) {
+    e.preventDefault();
     dispatch({ type: "query/typed", payload: e.target.value });
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
   }
 
   return (
@@ -74,6 +79,7 @@ function BooksProvider({ children }) {
         books,
         query,
         handleSearch,
+        handleSubmit,
       }}
     >
       {children}
