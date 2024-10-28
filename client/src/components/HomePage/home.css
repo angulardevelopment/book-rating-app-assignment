@@ -49,3 +49,11 @@
   padding-bottom: 20px;
   position: relative;
 }
+
+#sampleBooks{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
