@@ -4,6 +4,7 @@ import HomePage from "./components/HomePage/HomePage";
 
 import NavBar from "./components/NavBar/NavBar";
 
+import Books from "./components/Books/Books";
 import BookRatingPage from "./components/BookRatingPage/BookRatingPage";
 
 import Login from "./components/LoginPage/Login";
