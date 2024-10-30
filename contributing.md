@@ -48,7 +48,7 @@ Once you've forked the repository, clone it to your local machine using the foll
 
    ```bash
    git clone https://github.com/yourusername/book-rating-app-assignment.git
-
+```
 
 
 
