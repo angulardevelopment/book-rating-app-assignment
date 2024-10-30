@@ -37,51 +37,48 @@ The following features need to be implemented or improved as part of the ongoing
 - Additional features will be rolled out as we improve the app. Stay tuned, and feel free to contribute!
 
 ---
+## ⚙️ **Getting Started**
 
-## 🧑‍💻 Contributing
+To run the project locally, follow these steps:
 
-We welcome contributions! Follow these steps to contribute to the project:
+### 1. **Clone the repository**
 
-1. **Fork the Repository**  
-   Click the "Fork" button at the top right of the repository page to create a copy of the repository under your GitHub account.
+```bash
+git clone https://github.com/harith-hacky03/Dazzle-and-Delight.git
+cd Dazzle-and-Delight
+```
 
-2. **Clone Your Fork Locally**  
-   Once you've forked the repository, clone it to your local machine using the following command:
+### 2. **Install Dependencies**
 
-   ```bash
-   git clone https://github.com/yourusername/book-rating-app-assignment.git
-3. **Create a New Branch**  
-   It's good practice to create a new branch for each feature or bug fix you're working on:
+Run the following command to install dependencies:
 
-   
-   ```bash
-   git checkout -b feature/your-feature-name
+```bash
+npm install
+```
 
+### 3. **Run the Application**
 
-4. **Make Your Changes**  
-   Implement your changes locally. Be sure to follow any coding standards or guidelines provided by the project.
+Launch the development server with:
 
-5. **Commit and Push Your Changes**  
-   After making changes, stage and commit them:
+```bash
+npm start
+```
 
-   
-   ```bash
-   git add .
-   git commit -m "Describe your changes"
+The app should be available at `http://localhost:3000/`.
 
+----
 
-6. Push your changes to your forked repository:
+## 🤝 **Contributing**
 
-   
-   ```bash
-     git push origin feature/your-feature-name
+We welcome contributions to improve **Dazzle and Delight**! To contribute:
 
+1. Fork the repository 🍴
+2. Create a new branch (`git checkout -b feature/your-feature`) 🌱
+3. Make your changes and commit (`git commit -m 'Add some feature'`) 💡
+4. Push to the branch (`git push origin feature/your-feature`) 📤
+5. Open a Pull Request 🔄
 
-7. **Create a Pull Request**  
-   Once your changes are pushed, go to the original repository on GitHub and open a Pull Request (PR). Describe your changes and why they should be merged. The project maintainers will review your PR, and once approved, it will be merged into the project.
-
-8. **Wait for Feedback**  
-   The maintainers may request changes or provide feedback. Be sure to follow up on any requested changes before the PR is merged.
+**Read the [CONTRIBUTING.md](https://github.com/anjalit03/Dazzle-and-Delight/blob/main/CONTRIBUTING.md) file** to understand the contribution guidelines.
 
 ---
 
