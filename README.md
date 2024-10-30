@@ -78,7 +78,7 @@ We welcome contributions to improve **Dazzle and Delight**! To contribute:
 4. Push to the branch (`git push origin feature/your-feature`) 📤
 5. Open a Pull Request 🔄
 
-**Read the [CONTRIBUTING.md](https://github.com/anjalit03/Dazzle-and-Delight/blob/main/CONTRIBUTING.md) file** to understand the contribution guidelines.
+**Please read the [CONTRIBUTING.md](https://github.com/anjalit03/Dazzle-and-Delight/blob/main/CONTRIBUTING.md) file** to understand the contribution guidelines.
 
 ---
 
