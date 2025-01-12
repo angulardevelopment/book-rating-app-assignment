@@ -11,6 +11,7 @@ function createServer () {
     app.use(cookieParser());
     // Form type
     app.use(express.urlencoded({extended: false}))
+    // Middleware to parse JSON bodies
     app.use(express.json())
     app.use(formData.parse())
 
@@ -23,6 +24,17 @@ function createServer () {
 
     // Error Handler
     app.use(errorHandler)
+
+    
+// Define the /books route
+app.get('/books', (req, res) => {
+  // Example response, replace with actual logic to fetch books
+  res.json([
+    { id: 1, title: 'Book One', author: 'Author One' },
+    { id: 2, title: 'Book Two', author: 'Author Two' }
+  ]);
+});
+
 
     return app
 }
